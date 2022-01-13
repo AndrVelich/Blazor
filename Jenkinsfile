@@ -6,8 +6,8 @@ pipeline {
                 cleanWs()
             }
         }
-        stage ('Git Checkout') {
-            steps {
+        stage ('Git Checkout test') {
+            steps { 
                 git branch: 'release', credentialsId: 'github', url: 'https://github.com/AndrVelich/Blazor'
             }
         }
