@@ -18,7 +18,7 @@ pipeline {
                 bat "dotnet restore ${workspace}\\BlazorTest.sln"
             }
         }
-        stage('Clean') {
+        stage('dotnet Clean') {
             steps {
                 bat "dotnet clean ${workspace}\\BlazorTest.sln"
             }
