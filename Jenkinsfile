@@ -22,7 +22,7 @@ pipeline {
             steps {
                 bat "dotnet clean ${workspace}\\BlazorTest.sln"
             }
-        
+        }
         stage('Build') {
             steps {
                 bat "dotnet build ${workspace}\\BlazorTest.csproj --configuration Release"
@@ -33,7 +33,7 @@ pipeline {
                 bat "dotnet test ${workspace}\\Tests\\Tests.csproj"
             }
         }
-        stage('Publish'){
+        stage('Publish') {
             steps{
                 bat "dotnet publish ${workspace}\\BlazorTest.csproj --configuration Release"
             }
