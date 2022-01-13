@@ -14,9 +14,9 @@ pipeline {
             }
             
         }
-        stage ('test step') {
+        stage('Restore packages') {
             steps {
-                echo 'test step echo'
+                bat "dotnet restore ${workspace}\\BlazorPipeline\\BlazorTest.sln"
             }
         }
     }
