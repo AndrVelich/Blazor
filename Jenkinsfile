@@ -8,7 +8,7 @@ pipeline {
         }
         stage ('Git Checkout') {
             steps {
-                git branch: 'Release', credentialsId: 'github', url: 'https://github.com/AndrVelich/Blazor'
+                git branch: 'release', credentialsId: 'github', url: 'https://github.com/AndrVelich/Blazor'
             }
         }
     }
