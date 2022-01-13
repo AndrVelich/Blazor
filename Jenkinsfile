@@ -30,7 +30,7 @@ pipeline {
         }
         stage('Unit Test') {
             steps {
-                bat "dotnet test ${workspace}\\Tests\\Tests.csproj"
+                bat "dotnet test ${workspace}\\Tests\\Tests\\Tests.csproj"
             }
         }
         stage('Publish') {
