@@ -9,8 +9,8 @@ pipeline {
         }
         stage ('Git Checkout disabled') {
             steps {
-                echo 'Git Checkout disabled echo'
-                //git branch: 'release', credentialsId: 'github', url: 'https://github.com/AndrVelich/Blazor'
+                echo 'Git Checkout echo'
+                git branch: 'release', credentialsId: 'github', url: 'https://github.com/AndrVelich/Blazor'
             }
             
         }
