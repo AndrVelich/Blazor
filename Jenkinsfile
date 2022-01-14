@@ -1,8 +1,8 @@
 pipeline {
     //agent any
     agent {
-        docker { 
-            image '${workspace}' 
+        dockerfile {
+            filename 'Dockerfile'
         }
     }
     stages {
