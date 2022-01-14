@@ -1,5 +1,3 @@
-FROM microsoft/iis:windowsservercore
-COPY dotnet-runtime-2.0.4-win-x64.exe C:
-RUN C:\dotnet-runtime-2.0.4-win-x64.exe /quiet /install
+FROM mcr.microsoft.com/dotnet/sdk:5.0-buster-slim
 RUN apt-get -y update
 RUN apt-get -y install git
