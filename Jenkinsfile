@@ -3,7 +3,7 @@ pipeline {
     agent {
         dockerfile {
             filename 'Dockerfile'
-            args '-v tcp://127.0.0.1:2376:/var/run/docker.sock'
+            args '-v /usr/local/bin/docker:/usr/bin/docker'
         }
     }
     stages {
