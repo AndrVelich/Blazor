@@ -2,7 +2,7 @@ pipeline {
     //agent any
     agent {
         dockerfile {
-            filename 'Dockerfile',
+            filename 'Dockerfile'
             args '-v /var/run/docker.sock:/var/run/docker.sock'
         }
     }
