@@ -1,7 +1,8 @@
 pipeline {
     //agent any
     agent {
-        docker { image 'mcr.microsoft.com/dotnet/sdk:5.0-buster-slim' }
+        //docker { image 'mcr.microsoft.com/dotnet/sdk:5.0-buster-slim' }
+        agent { dockerfile true }
     }
     stages {
         stage('Clean') {
