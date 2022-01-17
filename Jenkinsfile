@@ -23,27 +23,27 @@ pipeline {
         }
         stage('Restore packages') {
             steps {
-                sh "dotnet restore ${workspace}\\BlazorTest.sln"
+                sh "dotnet restore ${workspace}/BlazorTest.sln"
             }
         }
         stage('dotnet Clean') {
             steps {
-                sh "dotnet clean ${workspace}\\BlazorTest.sln"
+                sh "dotnet clean ${workspace}/BlazorTest.sln"
             }
         }
         stage('Build') {
             steps {
-                sh "dotnet build ${workspace}\\BlazorTest.csproj --configuration Release"
+                sh "dotnet build ${workspace}/BlazorTest.csproj --configuration Release"
             }
         }
         stage('Unit Test') {
             steps {
-                sh "dotnet test ${workspace}\\Tests\\Tests\\Tests.csproj"
+                sh "dotnet test ${workspace}/Tests/Tests/Tests.csproj"
             }
         }
         stage('Publish') {
             steps{
-                sh "dotnet publish ${workspace}\\BlazorTest.csproj --configuration Release"
+                sh "dotnet publish ${workspace}/BlazorTest.csproj --configuration Release"
             }
         }
     }
