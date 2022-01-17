@@ -5,6 +5,9 @@ pipeline {
             filename 'Dockerfile'
         }
     }
+    environment {
+        HOME = '/tmp'
+    }
     stages {
         stage('Clean') {
             steps {
