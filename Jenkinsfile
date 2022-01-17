@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Restore packages') {
             steps {
-                sh "dotnet restore ${workspace}/BlazorTest.sln"
+                sh "dotnet restore BlazorTest.sln"
             }
         }
         stage('dotnet Clean') {
