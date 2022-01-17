@@ -24,7 +24,7 @@ pipeline {
         stage('Restore packages') {
             steps {
                 echo "workspace path : ${workspace}"
-                sh "dotnet restore ${workspace}/BlazorTest.sln"
+                sh "dotnet restore ${workspace}/BlazorTest.csproj"
             }
         }
         stage('dotnet Clean') {
